@@ -9,14 +9,14 @@
     <!-- Open Graph / Social Media -->
     <meta property="og:title" content="TradePose - High-Performance Trading Backtesting Platform">
     <meta property="og:description" content="Professional backtesting platform built with Rust for maximum performance and reliability.">
-    <meta property="og:image" content="/logo/square/logo_512.png">
+    <meta property="og:image" content="square/logo_512.png">
     <meta property="og:type" content="website">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/logo/square/favicon/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/logo/square/favicon/favicon-32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/logo/square/favicon/favicon-16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/logo/square/logo_256.png">
+    <link rel="icon" type="image/x-icon" href="square/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="square/favicon/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="square/favicon/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="circular/logo_circular_180.png">
 
     <title>TradePose - High-Performance Trading Backtesting Platform</title>
     <link rel="stylesheet" href="style.css">
@@ -27,12 +27,16 @@
         <div class="container">
             <div class="nav-content">
                 <div class="logo">
-                    <img src="logo_optimized.png" alt="TradePose Logo" width="40" height="35">
+                    <picture>
+                        <source srcset="square/logo_64.webp" type="image/webp">
+                        <img src="square/logo_64.png" alt="TradePose Logo" width="40" height="40">
+                    </picture>
                     <span class="logo-text">TradePose</span>
                 </div>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#features">Features</a></li>
                     <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                     <li><a href="#docs">Docs</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -288,6 +292,7 @@ results = bt.run(strategy)
                         <li><span class="check">✓</span> Email support</li>
                     </ul>
                     <a href="#" class="btn btn-outline">Get Started</a>
+                    <div class="pricing-refund">💰 14-day money-back guarantee</div>
                     <div class="pricing-note">Perfect for individual traders</div>
                 </div>
 
@@ -314,6 +319,7 @@ results = bt.run(strategy)
                         <li><span class="check">✓</span> Priority support (Discord)</li>
                     </ul>
                     <a href="#" class="btn btn-primary">Get Started</a>
+                    <div class="pricing-refund">💰 14-day money-back guarantee</div>
                     <div class="pricing-note">For professional traders & teams</div>
                 </div>
 
@@ -427,7 +433,73 @@ results = bt.run(strategy)
                     <a href="#pricing" class="btn btn-primary btn-large">Start Free Trial</a>
                     <a href="#docs" class="btn btn-secondary btn-large">Read Documentation</a>
                 </div>
-                <div class="cta-note">No credit card required • 14-day free trial • Cancel anytime</div>
+                <div class="cta-note">No credit card required • 14-day free trial • 14-day money-back guarantee</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about TradePose</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>💰 What is your refund policy?</h3>
+                    <p>We offer a <strong>14-day money-back guarantee</strong> on all subscription plans. If you're not satisfied with TradePose, simply contact us within 14 days of your purchase for a full refund. Please note that if you've used more than 50% of your compute credits, the refund may be prorated.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>🔄 Can I cancel my subscription anytime?</h3>
+                    <p>Yes! You can cancel your subscription at any time from your account dashboard. When you cancel, your subscription will remain active until the end of your current billing period, giving you full access to all features you've paid for. No questions asked, no hidden fees.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>🚀 How quickly can I get started?</h3>
+                    <p>You can start backtesting within minutes. Simply sign up for a free trial, install our Python client with <code>pip install tradepose</code>, and you're ready to run your first backtest. No credit card required for the trial.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>🔒 Is my strategy data secure?</h3>
+                    <p>Absolutely. Your trading strategies and data remain completely private. Our server only performs computations without accessing your trading logic. All data is encrypted in transit and at rest, and we never share your information with third parties.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>📊 What data sources do you support?</h3>
+                    <p>TradePose supports multiple asset classes including stocks, futures, forex, and cryptocurrencies. For Pro users, you can also upload your own custom datasets (up to 5GB) and integrate additional data sources like VIX, sentiment data, and news feeds.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>⚙️ Do I need to know Rust to use TradePose?</h3>
+                    <p>No! While TradePose is built with Rust for maximum performance, you write your strategies in Python using our intuitive API. You get the ease of Python development with the speed of Rust execution.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>💳 What payment methods do you accept?</h3>
+                    <p>We accept all major credit cards (Visa, Mastercard, American Express), PayPal, and other payment methods through our secure payment processor. All transactions are encrypted and PCI-compliant.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>📈 What if I run out of compute credits?</h3>
+                    <p>You can purchase additional compute credits at any time, or upgrade to a higher-tier plan for more credits per month. We'll send you notifications when you reach 80% and 95% of your monthly allocation so you're never caught off guard.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>🌍 Do you offer enterprise solutions?</h3>
+                    <p>Yes! Our Enterprise plan includes unlimited compute credits, dedicated infrastructure, custom data integrations, and 24/7 priority support. Contact our sales team to discuss your specific requirements and get a custom quote.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>🎓 Do you provide educational resources?</h3>
+                    <p>Yes! We offer comprehensive documentation, video tutorials, code examples, and a community Discord where you can learn from other quantitative traders. Pro and Enterprise users also get access to one-on-one onboarding sessions.</p>
+                </div>
+            </div>
+
+            <div class="faq-footer">
+                <p>Still have questions? <a href="#contact">Contact our support team</a> or check out our <a href="#docs">detailed documentation</a>.</p>
             </div>
         </div>
     </section>
@@ -467,7 +539,10 @@ results = bt.run(strategy)
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <img src="logo_optimized.png" alt="TradePose Logo" width="32" height="28">
+                    <picture>
+                        <source srcset="square/logo_64.webp" type="image/webp">
+                        <img src="square/logo_64.png" alt="TradePose Logo" width="32" height="32">
+                    </picture>
                     <span class="logo-text">TradePose</span>
                     <p class="footer-description">
                         High-performance trading backtesting platform built with Rust.
@@ -480,6 +555,7 @@ results = bt.run(strategy)
                         <ul>
                             <li><a href="#features">Features</a></li>
                             <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#faq">FAQ</a></li>
                             <li><a href="#docs">Documentation</a></li>
                             <li><a href="#">API Reference</a></li>
                         </ul>
@@ -499,6 +575,7 @@ results = bt.run(strategy)
                         <ul>
                             <li><a href="#">Privacy Policy</a></li>
                             <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#faq">Refund Policy</a></li>
                         </ul>
                     </div>
                 </div>
