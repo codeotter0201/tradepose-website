@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional backtesting platform built with Rust for maximum performance and reliability. Designed for quantitative traders who demand speed and accuracy.">
+    <meta name="keywords" content="backtesting platform, quantitative trading, algorithmic trading, trading strategy, python trading, rust backend, high performance computing">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="TradePose - High-Performance Trading Backtesting Platform">
+    <meta property="og:description" content="Professional backtesting platform built with Rust for maximum performance and reliability.">
+    <meta property="og:image" content="/logo/square/logo_512.png">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/logo/square/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo/square/favicon/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/logo/square/favicon/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/logo/square/logo_256.png">
+
+    <title>TradePose - High-Performance Trading Backtesting Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <img src="logo_optimized.png" alt="TradePose Logo" width="40" height="35">
+                    <span class="logo-text">TradePose</span>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#docs">Docs</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-cta">
+                    <a href="#pricing" class="btn btn-primary">Get Started</a>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="badge">Built with Rust 🦀</div>
+                    <h1>High-Performance Trading Backtesting Platform</h1>
+                    <p class="hero-description">
+                        Professional backtesting infrastructure designed for quantitative traders who demand
+                        <strong>speed</strong>, <strong>accuracy</strong>, and <strong>reliability</strong>.
+                        Test complex multi-asset strategies with enterprise-grade performance.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#pricing" class="btn btn-primary btn-large">Start Free Trial</a>
+                        <a href="#features" class="btn btn-secondary btn-large">Explore Features</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">99.9%</div>
+                            <div class="stat-label">Uptime</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">10x</div>
+                            <div class="stat-label">Faster</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Support</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                        </div>
+                        <div class="terminal-body">
+                            <pre><code><span class="comment"># Install Tradepose Python Client</span>
+<span class="keyword">pip install</span> tradepose
+
+<span class="comment"># Quick Start Example</span>
+<span class="keyword">from</span> tradepose <span class="keyword">import</span> Backtest
+
+<span class="comment"># Initialize backtest</span>
+bt = Backtest(
+    symbols=[<span class="string">"AAPL"</span>, <span class="string">"MSFT"</span>],
+    timeframe=<span class="string">"1h"</span>,
+    start=<span class="string">"2024-01-01"</span>
+)
+
+<span class="comment"># Run strategy</span>
+results = bt.run(strategy)
+<span class="keyword">print</span>(results.summary())
+
+<span class="output">✓ Backtest completed in 1.2s
+✓ Sharpe Ratio: 2.34
+✓ Max Drawdown: -12.5%</span></code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose TradePose?</h2>
+                <p>Enterprise-grade features built for professional quantitative trading</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Built with Rust for maximum performance. Process millions of data points in seconds with low-latency computation and high-throughput data processing.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Multi-Asset Support</h3>
+                    <p>Test strategies across stocks, futures, forex, and crypto. Multi-timeframe analysis with seamless data alignment and synchronization.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Custom Trigger System</h3>
+                    <p>Advanced trigger system for complex trading conditions. Integrate VIX, sentiment data, order flow, and news events into your strategies.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🐍</div>
+                    <h3>Python API</h3>
+                    <p>Developer-friendly Python client for rapid strategy development. Write strategies in Python, execute with Rust performance.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Data Privacy</h3>
+                    <p>Your strategies remain private. Server performs computation without accessing your trading logic. Custom indicators and data upload supported.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Portfolio Management</h3>
+                    <p>Manage complex portfolios with multiple strategies, currencies, risk controls, and broker accounts. Test hedging and correlation strategies.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>High Availability</h3>
+                    <p>99.9%+ uptime guarantee with production-grade reliability. Memory-safe architecture prevents crashes and data corruption.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>Hyperparameter Testing</h3>
+                    <p>Efficient parameter optimization with idempotent computations. Test thousands of combinations quickly and reliably.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Advantages -->
+    <section class="tech-section">
+        <div class="container">
+            <div class="tech-content">
+                <div class="tech-text">
+                    <h2>Built with Rust for Maximum Performance</h2>
+                    <p class="tech-description">
+                        We chose Rust because quantitative trading demands absolute reliability and speed.
+                        Our platform delivers enterprise-grade performance that scales with your trading complexity.
+                    </p>
+                    <ul class="tech-features">
+                        <li>
+                            <span class="tech-icon">✓</span>
+                            <div>
+                                <strong>Zero-Cost Abstractions</strong>
+                                <p>High-level features without performance penalty</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="tech-icon">✓</span>
+                            <div>
+                                <strong>Memory Safety</strong>
+                                <p>Prevents memory leaks and data corruption</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="tech-icon">✓</span>
+                            <div>
+                                <strong>Concurrent Safety</strong>
+                                <p>Reliable parallel computations without race conditions</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="tech-icon">✓</span>
+                            <div>
+                                <strong>Production-Grade Stability</strong>
+                                <p>Proven reliability in high-stakes trading environments</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tech-visual">
+                    <div class="performance-chart">
+                        <div class="chart-title">Performance Comparison</div>
+                        <div class="chart-bars">
+                            <div class="chart-bar">
+                                <div class="bar-label">Python (Pandas)</div>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 100%; background: #dc3545;">
+                                        <span>45.2s</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart-bar">
+                                <div class="bar-label">Python (NumPy)</div>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 60%; background: #ffc107;">
+                                        <span>27.8s</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart-bar">
+                                <div class="bar-label">C++</div>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 25%; background: #17a2b8;">
+                                        <span>11.3s</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart-bar">
+                                <div class="bar-label">TradePose (Rust)</div>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 10%; background: #28a745;">
+                                        <span>4.5s</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-note">* Backtesting 1M data points with 5 indicators</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple, Transparent Pricing</h2>
+                <p>Choose the plan that fits your trading needs</p>
+            </div>
+
+            <div class="pricing-cards">
+                <!-- Starter Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <p class="pricing-subtitle">Fast Backtesting</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price">$29</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <div class="pricing-annual">or $290/year (save 17%)</div>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> 1,000 compute credits/month</li>
+                        <li><span class="check">✓</span> Multi-asset support</li>
+                        <li><span class="check">✓</span> Multi-timeframe analysis</li>
+                        <li><span class="check">✓</span> Python API access</li>
+                        <li><span class="check">✓</span> Standard indicators library</li>
+                        <li><span class="check">✓</span> Email support</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Get Started</a>
+                    <div class="pricing-note">Perfect for individual traders</div>
+                </div>
+
+                <!-- Pro Plan (Featured) -->
+                <div class="pricing-card featured">
+                    <div class="featured-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Pro</h3>
+                        <p class="pricing-subtitle">Enterprise Performance</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price">$99</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <div class="pricing-annual">or $990/year (save 17%)</div>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> 10,000 compute credits/month</li>
+                        <li><span class="check">✓</span> All Starter features</li>
+                        <li><span class="check">✓</span> <strong>Custom indicators & formulas</strong></li>
+                        <li><span class="check">✓</span> <strong>Private data upload (5GB)</strong></li>
+                        <li><span class="check">✓</span> <strong>Advanced trigger system</strong></li>
+                        <li><span class="check">✓</span> Priority processing queue</li>
+                        <li><span class="check">✓</span> 99.9%+ uptime guarantee</li>
+                        <li><span class="check">✓</span> Priority support (Discord)</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Get Started</a>
+                    <div class="pricing-note">For professional traders & teams</div>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <p class="pricing-subtitle">Custom Solutions</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price">Custom</span>
+                    </div>
+                    <div class="pricing-annual">Contact sales</div>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> Unlimited compute credits</li>
+                        <li><span class="check">✓</span> Dedicated infrastructure</li>
+                        <li><span class="check">✓</span> Custom data integrations</li>
+                        <li><span class="check">✓</span> White-label solutions</li>
+                        <li><span class="check">✓</span> On-premise deployment</li>
+                        <li><span class="check">✓</span> 24/7 priority support</li>
+                        <li><span class="check">✓</span> Custom SLA agreements</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Contact Sales</a>
+                    <div class="pricing-note">For trading firms & institutions</div>
+                </div>
+            </div>
+
+            <!-- Compute Credits Explanation -->
+            <div class="credits-info">
+                <h3>How Compute Credits Work</h3>
+                <div class="credits-grid">
+                    <div class="credit-item">
+                        <div class="credit-icon">🎯</div>
+                        <div>
+                            <strong>Trigger Execution</strong>
+                            <p>2 credits per trigger</p>
+                        </div>
+                    </div>
+                    <div class="credit-item">
+                        <div class="credit-icon">📊</div>
+                        <div>
+                            <strong>Per Indicator</strong>
+                            <p>1 credit per indicator</p>
+                        </div>
+                    </div>
+                    <div class="credit-item">
+                        <div class="credit-icon">📈</div>
+                        <div>
+                            <strong>Data Processing</strong>
+                            <p>1 credit per 10,000 rows</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="credits-example">
+                    <strong>Example:</strong> Strategy with 5 indicators × 100,000 rows =
+                    2 (trigger) + 5 (indicators) + 10 (data) = <strong>17 credits</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="use-cases">
+        <div class="container">
+            <div class="section-header">
+                <h2>Built for Real Trading Challenges</h2>
+                <p>Handle complex scenarios that other platforms can't</p>
+            </div>
+
+            <div class="use-cases-grid">
+                <div class="use-case">
+                    <h3>🔀 Multi-Asset Hedging</h3>
+                    <p>Test correlation strategies across different asset classes. Combine stocks, futures, and forex with perfect data alignment.</p>
+                </div>
+
+                <div class="use-case">
+                    <h3>📰 Event-Driven Trading</h3>
+                    <p>Integrate news events, VIX spikes, and sentiment data into your backtests. Test how your strategy performs during market stress.</p>
+                </div>
+
+                <div class="use-case">
+                    <h3>💹 Order Flow Analysis</h3>
+                    <p>Incorporate order flow and market microstructure data. Test strategies based on real market dynamics beyond just OHLCV.</p>
+                </div>
+
+                <div class="use-case">
+                    <h3>🎲 Parameter Optimization</h3>
+                    <p>Run thousands of hyperparameter combinations efficiently. Find optimal settings without waiting days for results.</p>
+                </div>
+
+                <div class="use-case">
+                    <h3>📊 Portfolio Management</h3>
+                    <p>Manage multiple strategies across different accounts and brokers. Test risk allocation and rebalancing strategies.</p>
+                </div>
+
+                <div class="use-case">
+                    <h3>🕰️ Multi-Timeframe Strategies</h3>
+                    <p>Combine signals from different timeframes seamlessly. Test strategies that use both intraday and daily data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Supercharge Your Backtesting?</h2>
+                <p>Join quantitative traders who trust TradePose for their strategy development</p>
+                <div class="cta-buttons">
+                    <a href="#pricing" class="btn btn-primary btn-large">Start Free Trial</a>
+                    <a href="#docs" class="btn btn-secondary btn-large">Read Documentation</a>
+                </div>
+                <div class="cta-note">No credit card required • 14-day free trial • Cancel anytime</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>Have questions? We're here to help</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <p>admin@tradepose.com</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">💬</div>
+                    <h3>Discord</h3>
+                    <p>Join our community</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">📚</div>
+                    <h3>Documentation</h3>
+                    <p>Comprehensive guides</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo_optimized.png" alt="TradePose Logo" width="32" height="28">
+                    <span class="logo-text">TradePose</span>
+                    <p class="footer-description">
+                        High-performance trading backtesting platform built with Rust.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#docs">Documentation</a></li>
+                            <li><a href="#">API Reference</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 TradePose. All rights reserved.</p>
+                <p class="footer-tech">Built with Rust 🦀 • Powered by Quantitative Excellence</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
