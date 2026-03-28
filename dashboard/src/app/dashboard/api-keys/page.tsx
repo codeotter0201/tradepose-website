@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { gatewayClient, type CreateApiKeyResponse } from "@/lib/api";
 import { formatDistanceToNow, formatDate } from "@/lib/date";
-import { useAuth } from "@clerk/nextjs";
+import { useAuth } from "@clerk/clerk-react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { QUERY_KEYS } from "@/lib/hooks";
 import { Button } from "@/components/ui/button";

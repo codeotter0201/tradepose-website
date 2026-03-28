@@ -69,7 +69,7 @@ import {
 import { motion } from "framer-motion";
 import { StatCard, StatsGrid } from "@/components/dashboard/stat-card";
 import { useQueryClient } from "@tanstack/react-query";
-import { useAuth } from "@clerk/nextjs";
+import { useAuth } from "@clerk/clerk-react";
 import { useEngagements, useCloseEngagement } from "@/lib/hooks";
 import { type Engagement } from "@/lib/api";
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { UserButton } from "@clerk/nextjs";
+import { UserButton } from "@clerk/clerk-react";
 import { MobileSidebar } from "./sidebar";
 import { GlobalSearch } from "./global-search";
 import { NotificationBell } from "./notification-bell";

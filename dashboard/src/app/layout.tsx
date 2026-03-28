@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Fira_Code } from "next/font/google";
-import { ClerkProvider } from "@clerk/nextjs";
-import { dark } from "@clerk/themes";
+import { ClerkProviderWrapper } from "@/components/providers/clerk-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { QueryProvider } from "@/components/providers/query-provider";
 import "./globals.css";
@@ -29,17 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider
-      appearance={{
-        baseTheme: dark,
-        variables: {
-          colorPrimary: "#22c55e",
-          colorBackground: "#0f172a",
-          colorInputBackground: "#1e293b",
-          colorInputText: "#f8fafc",
-        },
-      }}
-    >
+    <ClerkProviderWrapper>
       <html lang="zh-TW" className="dark">
         <body
           className={`${plusJakarta.variable} ${firaCode.variable} font-sans antialiased`}
@@ -50,6 +39,6 @@ export default function RootLayout({
           <Toaster />
         </body>
       </html>
-    </ClerkProvider>
+    </ClerkProviderWrapper>
   );
 }
