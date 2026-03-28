@@ -10,3 +10,6 @@ binding = "ASSETS"
 [[services]]
 binding = "WORKER_SELF_REFERENCE"
 service = "tradepose-website"
+
+[observability.logs]
+enabled = true
