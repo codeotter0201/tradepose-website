@@ -1,6 +1,6 @@
 "use client";
 
-import { useUser, useClerk } from "@clerk/react";
+import { useUser, useClerk } from "@clerk/clerk-react";
 import {
   Card,
   CardContent,

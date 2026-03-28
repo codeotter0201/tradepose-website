@@ -11,7 +11,7 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@clerk/react": "^5.0.0",
+    "@clerk/clerk-react": "5.61.4",
     "@clerk/themes": "^2.4.51",
     "@radix-ui/react-avatar": "^1.1.11",
     "@radix-ui/react-dialog": "^1.1.15",
@@ -36,7 +36,7 @@
     "sonner": "^2.0.7",
     "tailwind-merge": "^3.4.0"
   },
-  "devDependencies": {
+"devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

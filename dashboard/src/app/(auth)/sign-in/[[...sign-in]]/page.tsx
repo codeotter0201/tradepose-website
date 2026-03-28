@@ -1,4 +1,6 @@
-import { SignIn } from "@clerk/react";
+"use client";
+
+import { SignIn } from "@clerk/clerk-react";
 
 export default function SignInPage() {
   return (

@@ -1,6 +1,6 @@
 "use client";
 
-import { ClerkProvider } from "@clerk/react";
+import { ClerkProvider } from "@clerk/clerk-react";
 import { dark } from "@clerk/themes";
 
 export function ClerkProviderWrapper({

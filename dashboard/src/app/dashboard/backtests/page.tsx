@@ -56,7 +56,7 @@ import {
 import { motion } from "framer-motion";
 import { StatCard, StatsGrid } from "@/components/dashboard/stat-card";
 import { useQueryClient } from "@tanstack/react-query";
-import { useAuth } from "@clerk/react";
+import { useAuth } from "@clerk/clerk-react";
 
 const containerVariants = {
   hidden: { opacity: 0 },
