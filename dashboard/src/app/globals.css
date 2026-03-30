@@ -156,6 +156,47 @@
   }
 }
 
+/* ── Clerk component micro-interaction overrides ────────────────────
+   Clerk renders in the normal DOM so Tailwind/CSS can target it.
+   We use !important to override Clerk's own inline specificity.
+   ------------------------------------------------------------------ */
+
+/* Input: focus glow → brand green ring */
+.cl-formFieldInput:focus {
+  border-color: #22c55e !important;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.2) !important;
+  outline: none !important;
+}
+
+/* Primary CTA: lift + deepen shadow on hover */
+.cl-formButtonPrimary {
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease !important;
+}
+.cl-formButtonPrimary:hover:not(:disabled) {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 8px 20px rgba(34, 197, 94, 0.4) !important;
+  filter: brightness(1.06) !important;
+}
+.cl-formButtonPrimary:active:not(:disabled) {
+  transform: translateY(0) !important;
+  filter: brightness(0.95) !important;
+}
+
+/* OAuth block buttons: force full-width & consistent height */
+.cl-socialButtonsBlockButton {
+  width: 100% !important;
+  justify-content: center !important;
+  height: 40px !important;
+}
+.cl-socialButtonsBlockButton:hover {
+  background: rgba(148, 163, 184, 0.08) !important;
+}
+
+/* Password input: letter-spacing so dots don't crowd */
+.cl-formFieldInput[type="password"] {
+  letter-spacing: 0.2em;
+}
+
 @layer utilities {
   /* Glass effect */
   .glass {
