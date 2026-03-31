@@ -2,18 +2,13 @@
 
 import { useAuth } from "@clerk/clerk-react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
-import { Suspense } from "react";
+import { useEffect, Suspense } from "react";
 import { Sidebar } from "@/components/dashboard/sidebar";
 import { Header } from "@/components/dashboard/header";
 import { Breadcrumb } from "@/components/dashboard/breadcrumb";
 import { PageSkeleton } from "@/components/dashboard/loading-skeleton";
 
-export default function DashboardLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+function AuthGuard({ children }: { children: React.ReactNode }) {
   const { isLoaded, isSignedIn } = useAuth();
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -27,6 +22,14 @@ export default function DashboardLayout({
 
   if (!isLoaded || !isSignedIn) return <PageSkeleton />;
 
+  return <>{children}</>;
+}
+
+export default function DashboardLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <div className="flex h-screen overflow-hidden bg-background">
       <Sidebar />
@@ -37,7 +40,7 @@ export default function DashboardLayout({
         </div>
         <main className="flex-1 overflow-y-auto p-4 lg:p-6">
           <Suspense fallback={<PageSkeleton />}>
-            {children}
+            <AuthGuard>{children}</AuthGuard>
           </Suspense>
         </main>
       </div>
