@@ -1,6 +1,6 @@
 "use client";
 
-import { useAuth, useSignIn, useSignUp } from "@clerk/clerk-react";
+import { useAuth, useSignIn } from "@clerk/clerk-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -91,7 +91,6 @@ const flipTransition = {
 export default function LandingPage() {
   const { isLoaded, isSignedIn } = useAuth();
   const { signIn, isLoaded: signInLoaded } = useSignIn();
-  const { signUp, isLoaded: signUpLoaded } = useSignUp();
   const router = useRouter();
 
   const [mode, setMode] = useState<"signin" | "signup">("signin");
@@ -104,16 +103,10 @@ export default function LandingPage() {
   async function handleOAuth(strategy: OAuthStrategy) {
     setOauthLoading(strategy);
     try {
-      if (mode === "signin" && signInLoaded && signIn) {
+      if (signInLoaded && signIn) {
         await signIn.authenticateWithRedirect({
           strategy,
           redirectUrl: "/sign-in",
-          redirectUrlComplete: "/dashboard",
-        });
-      } else if (signUpLoaded && signUp) {
-        await signUp.authenticateWithRedirect({
-          strategy,
-          redirectUrl: "/sign-up",
           redirectUrlComplete: "/dashboard",
         });
       }
@@ -128,7 +121,7 @@ export default function LandingPage() {
   }
 
   const c = MODES[mode];
-  const isReady = mode === "signin" ? signInLoaded : signUpLoaded;
+  const isReady = signInLoaded;
 
   return (
     <div className="flex h-svh flex-col overflow-hidden bg-background">

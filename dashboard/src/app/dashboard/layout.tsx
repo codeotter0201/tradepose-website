@@ -1,7 +1,7 @@
 "use client";
 
 import { useAuth } from "@clerk/clerk-react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import { Suspense } from "react";
 import { Sidebar } from "@/components/dashboard/sidebar";
@@ -16,14 +16,16 @@ export default function DashboardLayout({
 }) {
   const { isLoaded, isSignedIn } = useAuth();
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const isHandshaking = searchParams.has("__clerk_handshake");
 
   useEffect(() => {
-    if (isLoaded && !isSignedIn) {
+    if (isLoaded && !isSignedIn && !isHandshaking) {
       router.push("/");
     }
-  }, [isLoaded, isSignedIn]);
+  }, [isLoaded, isSignedIn, isHandshaking]);
 
-  if (!isLoaded || !isSignedIn) return null;
+  if (!isLoaded || !isSignedIn) return <PageSkeleton />;
 
   return (
     <div className="flex h-screen overflow-hidden bg-background">
